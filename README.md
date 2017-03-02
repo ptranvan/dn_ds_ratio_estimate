@@ -42,16 +42,22 @@ drwxr-xr-x 2 ptranvan dee_schwan 3545  2 mar 11:01 branch_lengths
 -rw-r--r-- 1 ptranvan dee_schwan 2931  2 mar 11:00 codeml_[model].ctl
 ```
 
+```mites2codeml.py``` can be stored anywhere but has to be run from the ```mites``` directory.
+
 2.1) For SAI and TI models:
 
 ```
-python mites2codeml.py -s sai_ti -i1 alignments -i2 branch_lengths -i3 codeml_sai_ti.ctl -e <your_email> -o sai_ti.sh
+cd mites
+
+python path/to/mites2codeml.py -s sai_ti -i1 alignments -i2 branch_lengths -i3 codeml_sai_ti.ctl -e <your_email> -o sai_ti.sh
 ```
 
 2.2) For Hydrophobicity model:
 
 ```
-python mites2codeml.py -s hydrophobicity -i1 alignments -i2 branch_lengths -i3 codeml_hydrophobicity.ctl -e <your_email> -o hydrophobicity.sh
+cd mites
+
+python path/to/mites2codeml.py -s hydrophobicity -i1 alignments -i2 branch_lengths -i3 codeml_hydrophobicity.ctl -e <your_email> -o hydrophobicity.sh
 ```
 
 3) A script (*.sh) will be created. It has to be run on Vital-IT server (usr@prd.vital-it.ch):
@@ -66,10 +72,10 @@ Once done, a directory output will be created.
 4) Options:
 
 ```
--i1: PATH of alignments directory.
--i2: PATH of branch_lengths directory.
--i3: Control file.
--e: Email for job confirmation.
--o: Name of the script file to be executed.
+-i1: alignments directory.
+-i2: branch_lengths directory.
+-i3: control file.
+-e: email for job confirmation.
+-o: name of the script file to be executed.
 ```
 
