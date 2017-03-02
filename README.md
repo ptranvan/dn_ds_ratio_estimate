@@ -25,7 +25,7 @@ Trees have been generated with [RAxML](http://sco.h-its.org/exelixis/software.ht
 
 ## <a name="2_paml"></a>2) dN/dS ratio estimates
 
-1. Create a directory for your species (mites).
+1) Create a directory for your species (mites).
 
 ```
 mkdir mites
@@ -42,19 +42,19 @@ drwxr-xr-x 2 ptranvan dee_schwan 3545  2 mar 11:01 branch_lengths
 -rw-r--r-- 1 ptranvan dee_schwan 2931  2 mar 11:00 codeml_[model].ctl
 ```
 
-2.1. For SAI and TI models:
+2.1) For SAI and TI models:
 
 ```
 python mites2codeml.py -s sai_ti -i1 alignments -i2 branch_lengths -i3 codeml_sai_ti.ctl -e <your_email> -o sai_ti.sh
 ```
 
-2.2. For Hydrophobicity model:
+2.2) For Hydrophobicity model:
 
 ```
 python mites2codeml.py -s hydrophobicity -i1 alignments -i2 branch_lengths -i3 codeml_hydrophobicity.ctl -e <your_email> -o hydrophobicity.sh
 ```
 
-3. A script (*.sh) will be created. It has to be run on Vital-IT server (usr@prd.vital-it.ch):
+3) A script (*.sh) will be created. It has to be run on Vital-IT server (usr@prd.vital-it.ch):
 
 ```
 chmod +x *.sh
@@ -63,13 +63,13 @@ chmod +x *.sh
 
 Once done, a directory output will be created.
 
-4. Options:
+4) Options:
 
 ```
 -i1: PATH of alignments directory.
 -i2: PATH of branch_lengths directory.
 -i3: Control file.
--e: Email for Job confirmation.
+-e: Email for job confirmation.
 -o: Name of the script file to be executed.
 ```
 
