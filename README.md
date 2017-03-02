@@ -8,7 +8,7 @@ Alignments are in [phylip](http://evolution.genetics.washington.edu/phylip.html)
 
 Trees have been generated with [RAxML](http://sco.h-its.org/exelixis/software.html) but have to be reformatted depending on the model.
 
-```mites2codeml``` is useful to reformat the input data to make it compatible with [Codeml (PAML)](http://abacus.gene.ucl.ac.uk/software/paml.html).
+```mites2codeml.py``` is useful to reformat the input data to make it compatible with [Codeml (PAML)](http://abacus.gene.ucl.ac.uk/software/paml.html).
  
 ## Table of contents
 
@@ -18,7 +18,8 @@ Trees have been generated with [RAxML](http://sco.h-its.org/exelixis/software.ht
 ## <a name="1_input"></a>1) Required input
 
 1. Need 2 directory and 1 control file:
-	* alignments/ directory: contain alignments in [phylip](http://evolution.genetics.washington.edu/phylip.html) format.
+
+	* alignments/ directory: contain alignments in phylip format.
 	* branch_lengths/ directory: contain the RAxML's trees in newick format.
 	* control template (available here codeml_[model].ctl)
 
@@ -41,7 +42,7 @@ drwxr-xr-x 2 ptranvan dee_schwan 3545  2 mar 11:01 branch_lengths
 -rw-r--r-- 1 ptranvan dee_schwan 2931  2 mar 11:00 codeml_[model].ctl
 ```
 
-2.1 For SAI and TI models:
+2.1. For SAI and TI models:
 
 ```
 python mites2codeml.py -s sai_ti -i1 alignments -i2 branch_lengths -i3 codeml_sai_ti.ctl -e <your_email> -o sai_ti.sh
